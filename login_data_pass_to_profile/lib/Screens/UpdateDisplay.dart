@@ -28,6 +28,7 @@ class Updatedisplay extends StatelessWidget {
             Text("NAME: ${name}"),
             Text("JOB : ${job}"),
             Text("TIME: ${updatedAT}"),
+            Text("TIME: ${updatedAT}"),
           ],
         ),
       ),
