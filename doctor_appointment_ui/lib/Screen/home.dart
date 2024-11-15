@@ -1,4 +1,6 @@
+import 'package:doctor_appointment_ui/Model/doctor.dart';
 import 'package:doctor_appointment_ui/Model/sympton.dart';
+import 'package:doctor_appointment_ui/Widgets/list_of_doctors.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -29,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 15),
           child: Text(
-            "What are your symthoms?",
+            "What are your symptoms?",
             style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -54,9 +56,62 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Container(
                           padding: EdgeInsets.symmetric(
                               horizontal: 18, vertical: 15),
+                          decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(12)),
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 10,
+                                backgroundImage:
+                                    AssetImage(symptoms[index].image),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                symptoms[index].label,
+                                style: TextStyle(
+                                    fontSize: 16, color: Colors.black),
+                              )
+                            ],
+                          ),
                         ),
                       ))
             ],
+          ),
+        ),
+        const SizedBox(
+          height: 35,
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Text(
+            "Popular doctors",
+            style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                letterSpacing: -.5,
+                color: Colors.black),
+          ),
+        ),
+        Expanded(
+          child: GridView.builder(
+            physics: BouncingScrollPhysics(),
+            padding: EdgeInsets.all(15),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, // Number of columns
+              crossAxisSpacing: 16,
+              mainAxisSpacing: 14,
+              childAspectRatio: 0.8, // Adjust to control card height
+            ),
+            itemCount: doctors.length,
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {},
+                child: ListOfDoctor(doctor: doctors[index]),
+              );
+            },
           ),
         ),
       ],
