@@ -155,7 +155,7 @@ List<Doctor> doctors = [
   ),
 ];
 const about =
-    "is an experienced specialist who is constantly working on improving her skills.";
+    "is an experienced specialist who is constantly working on improving her Skills.";
 
 rate(Doctor doctor) {
   double rate = 0;
