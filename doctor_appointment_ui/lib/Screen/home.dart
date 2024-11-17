@@ -3,6 +3,8 @@ import 'package:doctor_appointment_ui/Model/sympton.dart';
 import 'package:doctor_appointment_ui/Widgets/list_of_doctors.dart';
 import 'package:flutter/material.dart';
 
+import 'DoctorDetailScreen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -108,7 +110,16 @@ class _HomeScreenState extends State<HomeScreen> {
             itemCount: doctors.length,
             itemBuilder: (context, index) {
               return GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => DoctorDetailScreen(
+                        doctor: doctors[index],
+                      ),
+                    ),
+                  );
+                },
                 child: ListOfDoctor(doctor: doctors[index]),
               );
             },

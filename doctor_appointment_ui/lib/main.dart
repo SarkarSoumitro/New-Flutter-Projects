@@ -1,4 +1,3 @@
-import 'package:doctor_appointment_ui/Screen/DoctorDetailScreen.dart';
 import 'package:doctor_appointment_ui/Screen/home.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +28,7 @@ class _MainpageState extends State<Mainpage> {
   int selectedItem = 0;
   final List<Widget> pages = [
     HomeScreen(),
-    DoctorDetailScreen(),
+    HomeScreen(),
     HomeScreen(),
     HomeScreen(),
   ];
