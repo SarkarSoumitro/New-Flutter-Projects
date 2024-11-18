@@ -1,5 +1,9 @@
+import 'package:doctor_appointment_ui/Screen/Schedule.dart';
 import 'package:doctor_appointment_ui/Screen/home.dart';
 import 'package:flutter/material.dart';
+
+import 'Screen/Setting.dart';
+import 'Widgets/Message_Screen.dart';
 
 void main() {
   runApp(Myapp());
@@ -28,9 +32,9 @@ class _MainpageState extends State<Mainpage> {
   int selectedItem = 0;
   final List<Widget> pages = [
     HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    MessageScreen(),
+    ScheduleScreen(),
+    SettingsScreen(),
   ];
 
   @override
