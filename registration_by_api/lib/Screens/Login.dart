@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             TextFormField(
                 controller: Emailcontroller,
-                decoration: InputDecoration(hintText: "Email")),
+                decoration: InputDecoration(hintText: "Emaill")),
             const SizedBox(
               height: 20,
             ),
