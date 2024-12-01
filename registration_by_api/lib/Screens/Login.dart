@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             TextFormField(
                 controller: Passwordcontroller,
-                decoration: InputDecoration(hintText: "Password")),
+                decoration: InputDecoration(hintText: "Password ")),
             Container(
               margin: EdgeInsets.only(top: 20),
               decoration: BoxDecoration(
