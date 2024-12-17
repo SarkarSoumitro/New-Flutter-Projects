@@ -50,36 +50,34 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Row(
             children: [
               ...List.generate(
-                  symptoms.length,
-                  (index) => Padding(
-                        padding: index == 0
-                            ? EdgeInsets.only(left: 15, right: 15)
-                            : EdgeInsets.only(right: 15),
-                        child: Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 18, vertical: 15),
-                          decoration: BoxDecoration(
-                              color: Colors.grey.withOpacity(0.1),
-                              borderRadius: BorderRadius.circular(12)),
-                          child: Row(
-                            children: [
-                              CircleAvatar(
-                                radius: 10,
-                                backgroundImage:
-                                    AssetImage(symptoms[index].image),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                symptoms[index].label,
-                                style: TextStyle(
-                                    fontSize: 16, color: Colors.black),
-                              )
-                            ],
-                          ),
+                symptoms.length,
+                (index) => Padding(
+                  padding: index == 0
+                      ? EdgeInsets.only(left: 15, right: 15)
+                      : EdgeInsets.only(right: 15),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 18, vertical: 15),
+                    decoration: BoxDecoration(
+                        color: Colors.grey.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(12)),
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 10,
+                          backgroundImage: AssetImage(symptoms[index].image),
                         ),
-                      ))
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          symptoms[index].label,
+                          style: TextStyle(fontSize: 16, color: Colors.black),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),
