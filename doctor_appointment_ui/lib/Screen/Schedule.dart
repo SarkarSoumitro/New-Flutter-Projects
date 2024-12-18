@@ -1,7 +1,7 @@
-import 'package:doctor_appointment_ui/Widgets/schedule_items.dart';
 import 'package:flutter/material.dart';
 
 import '../Model/schedule.dart';
+import '../Widgets/schedule_items.dart';
 import '../const.dart';
 
 class ScheduleScreen extends StatelessWidget {
