@@ -12,24 +12,23 @@ class BooksHome extends StatelessWidget {
       body: ListView(
         children: [
           Padding(
-            padding: EdgeInsets.all(20),
-            child: Row(
-              children: [
-                Icon(
-                  Icons.book,
-                  size: 35,
-                  color: Colors.black,
-                ),
-                SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  "Book App",
-                  style: TextStyle(fontSize: 30),
-                )
-              ],
-            ),
-          ),
+              padding: EdgeInsets.all(20),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.book,
+                    size: 35,
+                    color: Colors.black,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Text(
+                    "Book App",
+                    style: TextStyle(fontSize: 30),
+                  )
+                ],
+              )),
           Container(
             color: Colors.white,
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
