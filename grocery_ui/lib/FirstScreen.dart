@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_ui/Hompage.dart';
 import 'package:grocery_ui/utils/colors.dart';
 
 class Firstscreen extends StatefulWidget {
@@ -57,7 +58,10 @@ class _FirstscreenState extends State<Firstscreen> {
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Hompage()));
+                    },
                     child: Text(
                       "Let's Explore",
                       style: TextStyle(
