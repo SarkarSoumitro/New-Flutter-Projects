@@ -55,6 +55,33 @@ class _MyhomepageState extends State<Myhomepage> {
                             decoration: BoxDecoration(
                                 color: item.color,
                                 borderRadius: BorderRadius.circular(30)),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  item.title,
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black),
+                                ),
+                                Text(
+                                  item.lb,
+                                  style: TextStyle(
+                                      fontSize: 16, color: Colors.black),
+                                ),
+                                Text(
+                                  "\$${item.price}",
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black),
+                                ),
+                                Image.asset(
+                                  item.imageUrl,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       );
@@ -119,7 +146,7 @@ class Myappbar extends StatelessWidget {
               ),
             ),
             Image.asset(
-              "assets/two line.png",
+              "images/two line.png",
               height: 40,
               width: 40,
             )

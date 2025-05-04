@@ -94,7 +94,7 @@ List<Item> foodShopItems() {
         price: '1.99',
         lb: '2 units',
         imageUrl: 'images/papaya.png',
-        height: 200),
+        height: 250),
     Item(
       myItems: true,
       title: 'Bananas',
@@ -117,6 +117,6 @@ List<Item> foodShopItems() {
         price: '3.55',
         lb: 'each',
         imageUrl: 'images/pineapple.png',
-        height: 200),
+        height: 250),
   ];
 }
