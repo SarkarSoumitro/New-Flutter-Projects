@@ -77,8 +77,33 @@ class _MyhomepageState extends State<Myhomepage> {
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black),
                                 ),
-                                Image.asset(
-                                  item.imageUrl,
+                                Expanded(
+                                  child: Image.asset(
+                                    item.imageUrl,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 123),
+                                  child: Container(
+                                    height: 40,
+                                    width: 30,
+                                    decoration: BoxDecoration(
+                                        color: item.myItems == true
+                                            ? item.color
+                                            : Colors.grey,
+                                        border: Border(
+                                            top: BorderSide(
+                                                width: 8, color: item.color),
+                                            left: BorderSide(
+                                                width: 2, color: item.color)),
+                                        borderRadius: BorderRadius.only(
+                                            bottomRight: Radius.circular(25),
+                                            topLeft: Radius.circular(25))),
+                                    child: Icon(
+                                      Icons.add,
+                                      size: 10,
+                                    ),
+                                  ),
                                 )
                               ],
                             ),
