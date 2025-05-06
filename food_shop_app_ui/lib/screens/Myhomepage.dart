@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:food_shop_app_ui/model/Model.dart';
+import 'package:food_shop_app_ui/screens/item_details.dart';
 
 class Myhomepage extends StatefulWidget {
   const Myhomepage({super.key});
@@ -49,6 +50,13 @@ class _MyhomepageState extends State<Myhomepage> {
                       return Padding(
                         padding: EdgeInsets.only(bottom: 20),
                         child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ItemDetails(item: item),
+                                ));
+                          },
                           child: Container(
                             padding: EdgeInsets.only(top: 15, left: 20),
                             height: item.height.toDouble(),
@@ -100,8 +108,13 @@ class _MyhomepageState extends State<Myhomepage> {
                                             bottomRight: Radius.circular(25),
                                             topLeft: Radius.circular(25))),
                                     child: Icon(
-                                      Icons.add,
-                                      size: 10,
+                                      item.myItems == true
+                                          ? Icons.check_sharp
+                                          : Icons.add,
+                                      size: 20,
+                                      color: item.myItems == true
+                                          ? Colors.white
+                                          : Colors.black,
                                     ),
                                   ),
                                 )
