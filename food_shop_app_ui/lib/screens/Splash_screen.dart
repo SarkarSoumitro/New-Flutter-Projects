@@ -38,12 +38,12 @@ class _SplashScreenState extends State<SplashScreen> {
             const Text(
               'Food Shop App',
               style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black),
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
             ),
             const SizedBox(height: 20),
-            const CircularProgressIndicator()
           ],
         ),
       ),
