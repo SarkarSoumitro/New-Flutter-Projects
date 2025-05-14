@@ -117,6 +117,40 @@ class ItemDetails extends StatelessWidget {
                           child: Icon(Icons.add),
                         ),
                       ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      height: MediaQuery.of(context).size.height * .2,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Text(
+                            "The outer layer, often edible, of most fruits is called the pericarp. Typically formed from the ovary, it surrounds the seeds; in some species, however, other structural tissues contribute to or form the edible portion. The pericarp may be described in three layers from outer to inner, i.e., the epicarp, mesocarp and endocarp."),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        height: 50,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: item.color),
+                        child: Center(
+                          child: Text(
+                            "Add to cart",
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
                     )
                   ],
                 ),

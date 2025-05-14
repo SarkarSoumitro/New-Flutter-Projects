@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_shop_app_ui/screens/Myhomepage.dart';
+import 'package:food_shop_app_ui/screens/Splash_screen.dart';
 
 void main() {
   runApp(Newapp());
@@ -12,7 +12,7 @@ class Newapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Myhomepage(),
+      home: SplashScreen(),
     );
   }
 }
